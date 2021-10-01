@@ -1,6 +1,6 @@
-const express = require('express');  //is the module that enable us to create a restful api 
-const bodyParser = require('body-parser'); //it allow us to use json back and forth between api and client
-const cors = require('cors'); //to allow our restapi to be accessed from anywhere (CROSS ORIGINS)
+const express = require('express');  
+const bodyParser = require('body-parser'); 
+const cors = require('cors'); 
 
 const app = express();
 const port = 40000;
@@ -14,13 +14,13 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 
 app.all('*',function(req,res,next){
-    res.header('Access-Control-Allow-Origin','*');//WE ALLOW ALL IP ADDRESSES
-    res.header('Access-Control-Allow-Methods','PUT,GET,POST,DELETE,OPTIONS');//WITH THIS WE ALLOW ALL THE HTTP VERBS
-    res.header('Access-Control-Allow-Headers','Content-Type');//WITH THIS WE ALLOW THE USE OF THE HEADER CONTENT TYPE
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Methods','PUT,GET,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers','Content-Type');
     next();
 });
 
-//THE ACTUAL ENDPOINT (listo)
+//listo
 app.get('/currentday',function(req,res){
     res.send('1st, october, 2021');
 
@@ -50,7 +50,7 @@ app.post('/sum2numbers',function(req,res){
    let num2 = req.body.num2;
    let sum = parseInt(num)+parseInt(num2);
 
-    //create an if sentence (falta)
+    
     res.send (sum.toString());
 
 });
@@ -61,7 +61,7 @@ app.post('/multiplication3numbers',function(req,res){
     let n2= req.body.n2;
     let result = n1 * n2;
     
-    //create an if sentence 
+    
     res.send(result.toString());
 
 });
@@ -72,7 +72,7 @@ app.post('/areasquare',function(req,res){
     let lado2 = req.body.lado2;
     let area = lado * lado2;
     
-    //create an if sentence 
+    
     res.send(area.toString());
 
 });
@@ -83,7 +83,7 @@ app.post('/areatriangle',function(req,res){
     var h = req.body.h;
     let area = (parseInt(b) * parseInt(h)) / 2;
 
-    //create an if sentence 
+    
     res.send(area.toString());
 
 
