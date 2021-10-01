@@ -59,7 +59,8 @@ app.post('/sum2numbers',function(req,res){
 app.post('/multiplication3numbers',function(req,res){
     let n1 = req.body.n1;
     let n2= req.body.n2;
-    let result = n1 * n2;
+    let n3= req.body.n3;
+    let result = n1 * n2 * n3;
     
     
     res.send(result.toString());
