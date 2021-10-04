@@ -20,31 +20,31 @@ app.all('*',function(req,res,next){
     next();
 });
 
-//listo
+
 app.get('/currentday',function(req,res){
     res.send('1st, october, 2021');
 
 });
 
-//listo
+
 app.get('/fullname',function(req,res){
     res.send('Tabita Sarai Fuentes Martinez');
 
 });
 
-//listo
+
 app.get('/city',function(req,res){
     res.send('Playas de Rosarito, B. C.');
     
 });
 
-//listo
+
 app.get('/school',function(req,res){
     res.send('Universidad de Mexicali');
 
 });
 
-//listo
+
 app.post('/sum2numbers',function(req,res){
    let num = req.body.num;
    let num2 = req.body.num2;
@@ -55,7 +55,7 @@ app.post('/sum2numbers',function(req,res){
 
 });
 
-//listo
+
 app.post('/multiplication3numbers',function(req,res){
     let n1 = req.body.n1;
     let n2= req.body.n2;
@@ -67,7 +67,7 @@ app.post('/multiplication3numbers',function(req,res){
 
 });
 
-//listo
+
 app.post('/areasquare',function(req,res){
     let lado = req.body.lado;
     let lado2 = req.body.lado2;
@@ -78,7 +78,7 @@ app.post('/areasquare',function(req,res){
 
 });
 
-//Listo
+
 app.post('/areatriangle',function(req,res){
     var b = req.body.b;
     var h = req.body.h;
